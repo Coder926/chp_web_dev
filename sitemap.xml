@@ -28,7 +28,7 @@
 
   <!-- ── Booking flow ── -->
   <url>
-    <loc>https://www.chphome.co.uk/annual-service-booking</loc>
+    <loc>https://www.chphome.co.uk/booking/</loc>
     <lastmod>2026-04-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
