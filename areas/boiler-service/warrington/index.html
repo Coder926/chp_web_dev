@@ -24,4 +24,30 @@
       });
     }
   }
-</script><script src="/promo-config.js"></script><script src="/scripts/promo.js"></script><script src="/scripts/interactions.js"></script></body></html>
+</script><!-- Promo shared scripts (API drives promo on this page — no static PROMO config) --><script src="/scripts/promo.js"></script><script src="/scripts/interactions.js"></script><script>(function(){const apiBaseUrl = "https://dev-api.chphome.co.uk/api";
+
+  // Fetch promotion from API and apply if an active promo exists
+  async function fetchPromo() {
+    try {
+      const res = await fetch(apiBaseUrl + '/customer/promotions/active');
+      if (!res.ok) return null;
+      const data = await res.json();
+      const results = data && data.results;
+      if (!Array.isArray(results) || results.length === 0) return null;
+      const promo = results[0];
+      return {
+        active: true,
+        code: promo.code || 'NONE',
+        label: promo.label,
+        text: promo.text,
+        detail: promo.detail
+      };
+    } catch (e) {
+      return null;
+    }
+  }
+
+  fetchPromo().then(function(promo) {
+    if (promo && window.applyPromo) window.applyPromo(promo);
+  });
+})();</script></body></html>

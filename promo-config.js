@@ -4,6 +4,7 @@
             boiler-service-manchester.html (ticker)
             boiler-service-TEMPLATE.html (ticker — template for future region pages)
             annual-service-booking.html (Step 5 promo banner)
+            /booking (BookingWizard.vue — two-tier promo lookup)
 
    active: true  → promo shown on all pages above
    active: false → promo hidden on all pages above (default off state)
@@ -15,7 +16,7 @@
    To change or end a promotion: edit the values below only.
    Do not duplicate this object in any other file.
 ════════════════════════════════════════════════════════════ */
-var PROMO = {
+window.activePromotion = {
   active: true,                                  // ← set false to turn off everywhere
   code:   'SUMMER5',                              // ← promotion code customers enter at checkout
   label:  'Summer Offer (ends 31 Aug)',            // short label — ticker highlight + slide-in headline

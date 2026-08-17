@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════════════
    CHP Home — promo logic (ticker bar + slide-in banner + hero badge)
-   Depends on: PROMO global from /promo-config.js
+   Depends on: window.activePromotion global from /promo-config.js
 
    Exposes:
      window.setTickerH()  — recalculates --bar-h from ticker bar height
@@ -87,7 +87,7 @@ window.applyPromo = function(promoData) {
   }
 };
 
-/* Auto-apply static PROMO if available */
-if (typeof PROMO !== 'undefined') {
-  window.applyPromo(PROMO);
+/* Auto-apply static promo config if available */
+if (window.activePromotion) {
+  window.applyPromo(window.activePromotion);
 }
