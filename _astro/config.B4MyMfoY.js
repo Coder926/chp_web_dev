@@ -1,1 +1,0 @@
-var e={apiBaseUrl:`https://dev-api.chphome.co.uk/api`,stripePublishableKey:``,verificationCodeExpirySeconds:600,paymentCountdownSeconds:900,paymentExpirySeconds:7200,bookingHistoryPageSize:10,calendarMaxMonthsAhead:3,bookingCutoffDays:2,rescheduleCutoffDays:2,supportEmail:`hello@chphome.co.uk`,supportWhatsapp:`447917287078`};export{e as t};

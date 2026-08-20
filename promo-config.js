@@ -17,7 +17,7 @@
    Do not duplicate this object in any other file.
 ════════════════════════════════════════════════════════════ */
 window.activePromotion = {
-  active: true,                                  // ← set false to turn off everywhere
+  active: false,                                  // ← set false to turn off everywhere
   code:   'SUMMER5',                              // ← promotion code customers enter at checkout
   label:  'Summer Offer (ends 31 Aug)',            // short label — ticker highlight + slide-in headline
   text:   'Save £5 with code SUMMER5',             // short line — ticker + booking page banner
