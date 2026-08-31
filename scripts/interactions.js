@@ -8,12 +8,10 @@
 (function() {
   var ham = document.getElementById('ham');
   var navLinks = document.getElementById('nav-links');
-  var mobMenuFoot = document.getElementById('mob-menu-foot');
   if (ham && navLinks) {
     ham.addEventListener('click', function() {
       var isOpen = navLinks.classList.toggle('open');
       ham.setAttribute('aria-expanded', isOpen);
-      if (mobMenuFoot) mobMenuFoot.classList.toggle('open');
     });
   }
 })();
