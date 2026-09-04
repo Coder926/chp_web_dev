@@ -31,7 +31,7 @@
    of the site (homepage, region pages, hub page) stays consistent.
 ════════════════════════════════════════════════════════════ */
 window.activePromotion = {
-  active: true,                                   // ← set false to turn off on booking.astro / BookingWizard.vue
+  active: false,                                   // ← set false to turn off on booking.astro / BookingWizard.vue
   code:   'SUMMER10',                              // ← must match the active backend promotion record's code
   label:  'Offer ends 31 Aug',                     // short label — booking page banner headline
   text:   'Save £10 with code SUMMER10',           // short line — booking page banner
