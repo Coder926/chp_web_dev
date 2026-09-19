@@ -1,1 +1,0 @@
-var e=class{static calendarId(e){return`C#${e}`}static serviceId(e){return`S#${e}`}static bookingId(e){return`CHP-${e.toString().padStart(5,`0`)}`}static engineerId(e){return`E#${e}`}};export{e as t};
