@@ -1,36 +1,8 @@
 /* ══════════════════════════════════════════════════════════════════════
    CHP Home — shared interactions
-   Hamburger menu, FAQ tabs/accordion/cap, fade-in, eyebrow typewriter,
-   gallery pause/play. Used by BaseLayout, DefaultTemplate, and index.astro.
+   FAQ tabs/accordion/cap, fade-in, eyebrow typewriter, gallery pause/play.
+   Hamburger menu + nav scroll state live inline in NavBar.astro.
    ══════════════════════════════════════════════════════════════════════ */
-
-/* ── Hamburger menu ──────────────────────────────────────────────────── */
-(function() {
-  var ham = document.getElementById('ham');
-  var navLinks = document.getElementById('nav-links');
-  if (ham && navLinks) {
-    ham.addEventListener('click', function() {
-      var isOpen = navLinks.classList.toggle('open');
-      ham.setAttribute('aria-expanded', isOpen);
-    });
-  }
-})();
-
-/* ── Nav scroll state ────────────────────────────────────────────────── */
-(function() {
-  var nav = document.getElementById('nav');
-  if (!nav) return;
-  /* Only toggle transparent navs — static navs (non-hero pages) start
-     with .scrolled and should stay that way. */
-  if (nav.getAttribute('data-transparent') !== 'true') return;
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 20) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  });
-})();
 
 /* ── FAQ accordion ───────────────────────────────────────────────────── */
 document.querySelectorAll('.faq-q').forEach(function(btn) {
