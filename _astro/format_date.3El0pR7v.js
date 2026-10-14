@@ -1,0 +1,1 @@
+import{o as e}from"./session.CqaefcPd.js";function t(t,n){let r=new Date(t),i=n?.dateStyle??`medium`,a=n?.timeStyle??`short`;return r.toLocaleString(`en-GB`,{timeZone:e,dateStyle:i,timeStyle:a})}function n(t,n){return new Date(t).toLocaleDateString(`en-GB`,{timeZone:e,weekday:n?.weekday??`short`,day:`numeric`,month:`short`,year:`numeric`})}export{t as n,n as t};
